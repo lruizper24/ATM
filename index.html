@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <p><b> CAJERO AUTOMÁTICO </b></p>
+      </h1>
+    </header>
+
+    <nav>
+      <div id="div.nav.bar">
+        <h2>
+          <p><u> Bienvenido </u></p>
+        </h2>
+      </div>
+      <div>
+        <button id="login-button"><p>Ingresar a mi Cuenta</p></button>
+      </div>
+      <div>
+        <button id="logout-button"><p>Salida Segura</p></button>
+      </div>
+    </nav>
+
+    <main>
+      <div id="login-form-div">
+        <form action="" id="login-form">
+          <h5 class="message-balance">Ingresa tus datos</h5>
+
+          <label for="identification-number"> Número de documento: </label>
+          <input type="number" id="identification-number" />
+          <br />
+          <label for="user-password">Contraseña:</label>
+          <input type="password" id="user-password" />
+          <br />
+          <button id="loginUserButton" onclick="verifyUser()">Ingresar</button>
+        </form>
+      </div>
+
+      <div id="account-user-data">
+        <h3 id="welcomeMessage"><p></p></h3>
+
+        <h4>
+          <button id="check-account-balance">Consultar mi saldo</button>
+          <div id="my-balance-is">
+            <p id="balance-account" class="message-balance"></p>
+          </div>
+          <button id="deposit-money">Consignar</button>
+          <div id="deposit-amount">
+            <form id="form-sum-deposit-amount">
+              <label for="deposit-amount-value"> Valor del deposito: </label>
+              <input type="number" id="deposit-amount-value" />
+              <button id="valid-deposit-amount-value" type="submit">
+                Validar
+              </button>
+              <p id="new-balance-account" class="message-balance"></p>
+            </form>
+          </div>
+          <button id="withdraw-money">Retirar</button>
+          <div id="withdraw-amount">
+            <form id="form-rest-deposit-amount">
+              <label for="withdraw-amount-value"> Valor del retiro: </label>
+              <input type="number" id="withdraw-amount-value" />
+              <button id="valid-withdraw-amount-value" type="submit">
+                Validar
+              </button>
+              <p id="new-balance-account2" class="message-balance"></p>
+            </form>
+          </div>
+        </h4>
+      </div>
+    </main>
+  </body>
+</html>
